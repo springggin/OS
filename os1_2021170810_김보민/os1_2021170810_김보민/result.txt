@@ -1,0 +1,43 @@
+bomin@bomin-VirtualBox:~$ ./call_my_stack
+PUSH 1
+PUSH 1
+PUSH 2
+PUSH 3
+POP  3
+POP  2
+POP  1
+
+
+bomin@bomin-VirtualBox:~$ dmesg
+[   43.271377] [System Call] os2023_push:
+[   43.271378] Stack Top--------------
+[   43.271379] 1
+[   43.271380] Stack Bottom------------
+[   43.271433] [System Call] os2023_push:
+[   43.271433] Stack Top--------------
+[   43.271434] 1
+[   43.271434] Stack Bottom------------
+[   43.271437] [System Call] os2023_push:
+[   43.271437] Stack Top--------------
+[   43.271438] 2
+[   43.271438] 1
+[   43.271439] Stack Bottom------------
+[   43.271441] [System Call] os2023_push:
+[   43.271441] Stack Top--------------
+[   43.271441] 3
+[   43.271442] 2
+[   43.271442] 1
+[   43.271443] Stack Bottom------------
+[   43.271445] [System Call] os2023_pop:
+[   43.271445] Stack Top--------------
+[   43.271446] 2
+[   43.271446] 1
+[   43.271446] Stack Bottom------------
+[   43.271448] [System Call] os2023_pop:
+[   43.271449] Stack Top--------------
+[   43.271449] 1
+[   43.271449] Stack Bottom------------
+[   43.271451] [System Call] os2023_pop:
+[   43.271452] Stack Top--------------
+[   43.271452] Stack Bottom------------
+
